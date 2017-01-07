@@ -1,0 +1,33 @@
+# See: https://github.com/arduino/Arduino/wiki/Arduino-IDE-1.5---3rd-party-Hardware-specification
+# See: http://code.google.com/p/arduino/wiki/Platforms
+
+##############################################################
+
+menu.cpu=Processor
+
+########################################
+## Anet V1 (sanguino clone) -
+########################################
+anet.name=Anet V1.0
+
+anet.upload.tool=arduino:avrdude
+anet.upload.protocol=arduino
+anet.upload.maximum_size=131072
+anet.upload.speed=57600
+
+anet.bootloader.low_fuses=0xD6
+anet.bootloader.high_fuses=0xDA
+anet.bootloader.extended_fuses=0xFD
+anet.bootloader.unlock_bits=0x3F
+anet.bootloader.lock_bits=0x0F
+
+anet.build.mcu=atmega1284p
+anet.build.f_cpu=16000000L
+anet.build.board=AVR_SANGUINO
+anet.build.core=arduino:arduino
+anet.build.variant=sanguino
+
+anet.bootloader.file=atmega/ATmegaBOOT_168_atmega1284p.hex
+anet.bootloader.tool=avrdude
+
+
