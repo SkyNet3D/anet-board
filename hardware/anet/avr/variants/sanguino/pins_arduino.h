@@ -95,7 +95,7 @@ static const uint8_t A7 = 24;
 //  MISO (D 6) PB6  7|        |34  PA6 (AI 6 / D25)
 //   SCK (D 7) PB7  8|        |33  PA7 (AI 7 / D24)
 //             RST  9|        |32  AREF
-//             VCC 10|        |31  GND 
+//             VCC 10|        |31  GND
 //             GND 11|        |30  AVCC
 //           XTAL2 12|        |29  PC7 (D 23)
 //           XTAL1 13|        |28  PC6 (D 22)
@@ -108,7 +108,7 @@ static const uint8_t A7 = 24;
 //  PWM (D 14) PD6 20|        |21  PD7 (D 15) PWM
 //                   +--------+
 //
-#define NUM_DIGITAL_PINS            24
+#define NUM_DIGITAL_PINS            32
 #define NUM_ANALOG_INPUTS           8
 #define analogInputToDigitalPin(p)  ((p < 7) ? (p) + 24 : -1)
 
