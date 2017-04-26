@@ -12,7 +12,7 @@ anet.name=Anet V1.0
 
 anet.upload.tool=arduino:avrdude
 anet.upload.protocol=arduino
-anet.upload.maximum_size=131072
+anet.upload.maximum_size=126976
 anet.upload.speed=57600
 
 anet.bootloader.low_fuses=0xD6
