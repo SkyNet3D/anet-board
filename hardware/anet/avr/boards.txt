@@ -38,7 +38,7 @@ aneto.name=Anet V1.0 (Optiboot)
 aneto.upload.tool=arduino:avrdude
 aneto.upload.protocol=arduino
 aneto.upload.maximum_size=130048
-aneto.upload.speed=57600
+aneto.upload.speed=115200
 
 aneto.bootloader.low_fuses=0xD6
 aneto.bootloader.high_fuses=0xDE
