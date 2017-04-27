@@ -12,7 +12,7 @@ anet.name=Anet V1.0
 
 anet.upload.tool=arduino:avrdude
 anet.upload.protocol=arduino
-anet.upload.maximum_size=131072
+anet.upload.maximum_size=126976
 anet.upload.speed=57600
 
 anet.bootloader.low_fuses=0xD6
@@ -30,4 +30,28 @@ anet.build.variant=sanguino
 anet.bootloader.file=atmega/ATmegaBOOT_168_atmega1284p.hex
 anet.bootloader.tool=avrdude
 
+###########################################
+## Anet V1 with Optiboot bootloader
+###########################################
+aneto.name=Anet V1.0 (Optiboot)
+
+aneto.upload.tool=arduino:avrdude
+aneto.upload.protocol=arduino
+aneto.upload.maximum_size=130048
+aneto.upload.speed=115200
+
+aneto.bootloader.low_fuses=0xD6
+aneto.bootloader.high_fuses=0xDE
+aneto.bootloader.extended_fuses=0xFD
+aneto.bootloader.unlock_bits=0x3F
+aneto.bootloader.lock_bits=0x0F
+
+aneto.build.mcu=atmega1284p
+aneto.build.f_cpu=16000000L
+aneto.build.board=AVR_SANGUINO
+aneto.build.core=arduino:arduino
+aneto.build.variant=sanguino
+
+aneto.bootloader.file=atmega/optiboot_atmega1284p.hex
+aneto.bootloader.tool=avrdude
 
