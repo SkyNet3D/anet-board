@@ -25,6 +25,7 @@
   -----------
   11/25/11  - ryan@ryanmsutton.com - Add pins for Sanguino 644P and 1284P
   07/15/12  - ryan@ryanmsutton.com - Updated for arduino0101
+  06/16/17  - r.e. - some corrections for 1284P (TQFP/QFN/MLF 44pin)
 */
 
 #ifndef Pins_Arduino_h
@@ -83,33 +84,62 @@ static const uint8_t A7 = 24;
 // extern const uint8_t PROGMEM digital_pin_to_bit_mask_PGM[];
 // extern const uint8_t PROGMEM digital_pin_to_timer_PGM[];
 
-// ATMEL ATMEGA644P / SANGUINO
+// ATMEL ATMEGA1284 PDIP 40pin  (SANGUINO Pinout PA0..PA7 > D31..D24)
 //
-//                   +---\/---+
-//  INT0 (D 0) PB0  1|        |40  PA0 (AI 0 / D31)
-//  INT1 (D 1) PB1  2|        |39  PA1 (AI 1 / D30)
-//  INT2 (D 2) PB2  3|        |38  PA2 (AI 2 / D29)
-//   PWM (D 3) PB3  4|        |37  PA3 (AI 3 / D28)
-//   PWM (D 4) PB4  5|        |36  PA4 (AI 4 / D27)
-//  MOSI (D 5) PB5  6|        |35  PA5 (AI 5 / D26)
-//  MISO (D 6) PB6  7|        |34  PA6 (AI 6 / D25)
-//   SCK (D 7) PB7  8|        |33  PA7 (AI 7 / D24)
-//             RST  9|        |32  AREF
-//             VCC 10|        |31  GND
-//             GND 11|        |30  AVCC
-//           XTAL2 12|        |29  PC7 (D 23)
-//           XTAL1 13|        |28  PC6 (D 22)
-//  RX0 (D 8)  PD0 14|        |27  PC5 (D 21) TDI
-//  TX0 (D 9)  PD1 15|        |26  PC4 (D 20) TDO
-//  RX1 (D 10) PD2 16|        |25  PC3 (D 19) TMS
-//  TX1 (D 11) PD3 17|        |24  PC2 (D 18) TCK
-//  PWM (D 12) PD4 18|        |23  PC1 (D 17) SDA
-//  PWM (D 13) PD5 19|        |22  PC0 (D 16) SCL
-//  PWM (D 14) PD6 20|        |21  PD7 (D 15) PWM
-//                   +--------+
+//                           +---\/---+
+//               (D 0) PB0  1|        |40  PA0 (AI 0 / D31)
+//               (D 1) PB1  2|        |39  PA1 (AI 1 / D30)
+//     INT2      (D 2) PB2  3|        |38  PA2 (AI 2 / D29)
+//           PWM (D 3) PB3  4|        |37  PA3 (AI 3 / D28)
+//           PWM (D 4) PB4  5|        |36  PA4 (AI 4 / D27)
+//          MOSI (D 5) PB5  6|        |35  PA5 (AI 5 / D26)
+//          MISO (D 6) PB6  7|        |34  PA6 (AI 6 / D25)
+//           SCK (D 7) PB7  8|        |33  PA7 (AI 7 / D24)
+//                     RST  9|        |32  AREF
+//                     VCC 10|        |31  GND
+//                     GND 11|        |30  AVCC
+//                   XTAL2 12|        |29  PC7 (D 23)
+//                   XTAL1 13|        |28  PC6 (D 22)
+//          RX0 (D 8)  PD0 14|        |27  PC5 (D 21) TDI
+//          TX0 (D 9)  PD1 15|        |26  PC4 (D 20) TDO
+//     INT0 RX1 (D 10) PD2 16|        |25  PC3 (D 19) TMS
+//     INT1 TX1 (D 11) PD3 17|        |24  PC2 (D 18) TCK
+//          PWM (D 12) PD4 18|        |23  PC1 (D 17) SDA
+//          PWM (D 13) PD5 19|        |22  PC0 (D 16) SCL
+//          PWM (D 14) PD6 20|        |21  PD7 (D 15) PWM
+//                           +--------+
 //
+// ATMEL ATMEGA1284 TQFP/QFM/MLF 44pin  (SANGUINO Pinout PA0..PA7 > D31..D24)
+//
+//                        +-----------------+
+//     MOSI (D 5)  PB5   6|O                |44  PB4 (D 4) PWM
+//     MISO (D 6)  PB6   2|                 |43  PB3 (D 3) PWM
+//      SCK (D 7)  PB7   3|                 |42  PB2 (D 2)     INT2
+//                 RST   4|                 |41  PB1 (D 1)
+//                 VCC   5|                 |40  PB0 (D 0)
+//                 GND   6|                 |39  GND
+//               XTAL2   7|                 |38  VCC
+//               XTAL1   8|                 |37  PA0 (AI 0 / D31)
+//      RX0 (D 8)  PD0   9|                 |36  PA1 (AI 1 / D30)
+//      TX0 (D 9)  PD1  10|                 |35  PA2 (AI 2 / D29)
+// INT0 RX1 (D 10) PD2  11|                 |34  PA3 (AI 3 / D28)
+//                        |                 |33  PA4 (AI 4 / D27)
+// INT1 TX1 (D 11) PD3  12|                 |
+//      PWM (D 12) PD4  13|                 |32  PA5 (AI 5 / D26)
+//      PWM (D 13) PD5  14|                 |31  PA6 (AI 6 / D25)
+//      PWM (D 14) PD6  15|                 |30  PA7 (AI 7 / D24)
+//      PWM (D 15) PD7  16|                 |29  AREF
+//                 VCC  17|                 |28  GND
+//                 GND  18|                 |27  AVCC
+//      SCL (D 16) PC0  19|                 |26  PC7 (D 23)
+//      SDA (D 17) PC1  20|                 |25  PC6 (D 22)
+//      TCK (D 18) PC2  21|                 |24  PC5 (D 21) TDI
+//      TMS (D 19) PC3  22|                 |23  PC4 (D 20) TDO
+//                        +-----------------+
+
 #define NUM_DIGITAL_PINS            32
 #define NUM_ANALOG_INPUTS           8
+#define EXTERNAL_NUM_INTERRUPTS     3
 #define analogInputToDigitalPin(p)  ((p < 7) ? (p) + 24 : -1)
 
 #define digitalPinHasPWM(p)         ((p) == 3 || (p) == 4 || (p) == 12 || (p) == 13 || (p) == 14 || (p) == 15 )
@@ -136,7 +166,8 @@ static const uint8_t A7 = 24;
                                 0 ) ) ) )
 
 #define digitalPinToInterrupt(p) ((p) == 10 ? 0 : ((p) == 11 ? 1 : ((p) == 2 ? 2 \
-                                : NOT_AN_INTERRUPT)))	// mega1284p dip
+                                : NOT_AN_INTERRUPT)))
+
 
 #define PA 1
 #define PB 2
