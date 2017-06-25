@@ -12,12 +12,13 @@ Copy the included 'anet' folder into the 'hardware' folder of your Arduino insta
 Then:
 
 #### Windows
-4. Open 'C:\Program Files\Arduino' in Windows Explorer
-5. Open the anet-board zip file you downloaded in step 2 and copy the 'anet' folder to `C:\Program Files\Arduino\hardware`
+4. Open your `Documents` folder in Windows Explorer
+5. Open the `Arduino` folder, then the `hardware` sub-folder.  If neither of these folders exist, create them.
+6. Open the anet-board zip file you downloaded in step 2 and copy the 'anet' folder into `Documents\Arduino\hardware`
 
 #### OS X
 4. Click on "Documents" in Finder and look for the `Arduino` directory inside it. The full path is `~/Documents/Arduino/hardware`
-5. Open the anet-board zip file you downloaded in step 2 and copy the 'anet' folder to `~/Documents/Arduino/hardware`
+5. Open the anet-board zip file you downloaded in step 2 and copy the 'anet' folder into `~/Documents/Arduino/hardware`
 
 ## Using the Board Definition
 1. Open the Arduino IDE
