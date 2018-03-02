@@ -13,6 +13,7 @@ anet.name=Anet V1.0
 anet.upload.tool=arduino:avrdude
 anet.upload.protocol=arduino
 anet.upload.maximum_size=126976
+anet.upload.maximum_data_size=16384
 anet.upload.speed=57600
 
 anet.bootloader.low_fuses=0xD6
@@ -38,6 +39,7 @@ aneto.name=Anet V1.0 (Optiboot)
 aneto.upload.tool=arduino:avrdude
 aneto.upload.protocol=arduino
 aneto.upload.maximum_size=130048
+aneto.upload.maximum_data_size=16384
 aneto.upload.speed=115200
 
 aneto.bootloader.low_fuses=0xD6
