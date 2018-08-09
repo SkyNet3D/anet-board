@@ -20,6 +20,11 @@ Then:
 4. Click on "Documents" in Finder and look for the `Arduino` directory inside it. The full path is `~/Documents/Arduino/hardware`
 5. Open the anet-board zip file you downloaded in step 2 and copy the 'anet' folder into `~/Documents/Arduino/hardware`
 
+#### Linux (Ubuntu)
+4. Find location of Arduino IDE configuration files, usually: `~/Arduino/`, create hardware folder if not exists: `mkdir ~/Arduino/hardware`
+5. Extract Anet folder from downloaded zip to `~/Arduino/hardware/`
+6. Restart Arduino IDE
+
 ## Using the Board Definition
 1. Open the Arduino IDE
 2. Open the Tools->Board menu and select either of the Anet V1.0 boards
