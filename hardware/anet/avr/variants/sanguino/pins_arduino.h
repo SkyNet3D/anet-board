@@ -36,22 +36,38 @@
 #define NOT_A_PORT 0
 
 #define NOT_ON_TIMER 0
+#undef TIMER0A
 #define TIMER0A 1
+#undef TIMER0B
 #define TIMER0B 2
+#undef TIMER1A
 #define TIMER1A 3
+#undef TIMER1B
 #define TIMER1B 4
+#undef TIMER2
 #define TIMER2  5
+#undef TIMER2A
 #define TIMER2A 6
+#undef TIMER2B
 #define TIMER2B 7
 
+#undef TIMER3A
 #define TIMER3A 8
+#undef TIMER3B
 #define TIMER3B 9
+#undef TIMER3C
 #define TIMER3C 10
+#undef TIMER4A
 #define TIMER4A 11
+#undef TIMER4B
 #define TIMER4B 12
+#undef TIMER4C
 #define TIMER4C 13
+#undef TIMER5A
 #define TIMER5A 14
+#undef TIMER5B
 #define TIMER5B 15
+#undef TIMER5C
 #define TIMER5C 16
 
 const static uint8_t SS   = 4;
